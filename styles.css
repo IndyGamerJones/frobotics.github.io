@@ -46,7 +46,34 @@ body {
 	width: 1000px;
 	margin: 0 auto;
 }
-
+@keyframes menuLoadText {
+    10% {
+      opacity: 0;
+    }
+    55% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 0;
+    }
+}
+@keyframes menuLoadHeader {
+    0% {
+      margin-top: -55px;
+    }
+    50% {
+      margin-top: 0px;
+    }
+    65% {
+      margin-top: 0px;
+    }
+    85% {
+      margin-top: -55px;
+    }
+}
 #header{
   overflow: hidden;
   background-color: #191919;
@@ -58,11 +85,13 @@ body {
   padding: 5px;
 	height: 65px;
 	border-bottom: 1px solid #ffffff;
+  animation: 5s menuLoadHeader;
   transition: margin-top 0.875s;
   margin-top: -55px;
 }
 #header li > a{
-  transition: opacity 3s;
+  animation: 5s menuLoadText;
+  transition: opacity 1s;
   opacity: 0;
 }
 #header:hover li > a{
